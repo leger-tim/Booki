@@ -1,0 +1,196 @@
+/* Couleurs qu'on utilisera bleu:#0065FC bleu clair:#DEEBFF gris:#F2F2F2 */
+/* Pour le responsive on utilisera les media queries avec breakpoints ordi 992px tablette 768px et mobile en dessous de 768px */
+
+/* QUESTION: Est-ce qu'on doit faire plusieurs fichiers css ? */
+
+@media only screen and (max-width: 768px) { 
+
+
+*{
+    box-sizing: border-box;
+
+}
+
+
+body {
+    font-family: 'Raleway', sans-serif;
+  
+
+    /* Utile pour que les élements soient collés aux bords de la page */ 
+
+    margin: 0;
+
+}
+
+/* Header */
+
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    flex-direction: column;
+    width: 100%;
+}
+
+nav img {
+    height: 45px;
+    margin: 35px 60px ;
+    /* background-color: red; */
+}
+
+nav ul {
+
+    display: flex;
+    width: 100%;
+
+
+    /* Supprime les puces */
+
+    list-style: none;
+
+}
+
+nav li {
+    margin: 19 0 0 60; 
+    width: 100%;
+}
+
+nav li a { 
+
+    /* Supprime le soulignage */
+
+    text-decoration: none;
+
+    color: black;
+
+    padding: 0px 41px 14px 20px;
+  
+    width: 100%;
+}
+
+
+    /* Donne l'effet bleu quand on passe la souris sur les liens */
+
+a:hover {
+
+    color: #0065FC;
+
+    border-bottom: 3px #0065FC solid;
+    width: 50%;
+}
+
+
+/* Main */
+
+main {
+
+    margin-bottom: 0px;
+
+    /* background-color: yellow; */
+    
+}
+
+h1 {
+
+    font-size: larger;
+    margin-left: 45px;
+
+    /* Valeur négative pour rapprocher le titre du paragraphe dessous */
+
+    margin-bottom: -10px; 
+
+    /* background-color: red; */
+}
+
+p {
+
+    margin-left: 44px;
+   
+}
+
+/* QUESTION: Comment bien aligner les trois éléments du formulaire ? */
+/* QUESTION: Problème pour ajuster la taille des éléments  */
+
+/* Formulaire */
+
+#formulaire {
+    margin-left: 48px;
+    display: flex;
+    align-items: center;
+}
+
+
+
+#icone-position {
+
+    background-color: #F2F2F2;
+    padding: 15px;
+    padding-right: 17px;
+
+    border-radius: 13px 0 0 13px;
+    height: 45px;
+
+    
+}
+
+/* QUESTION: je dois enlever la bordure noir quand on clique ? */
+
+#choix-ville {
+
+    padding: 12px;
+    border-radius: 0;
+    border: solid;
+    border-width: thin;
+    /* border-color: #0065FC; */
+    border-color: #F2F2F2;
+    font-weight:bolder;
+    font-size: large;
+    height: 45px;
+    width: 210px;
+
+
+    
+}
+#choix-ville::placeholder {
+
+    color: black;
+}
+
+
+#choix-ville:focus::placeholder {
+    color: transparent;
+
+}
+
+#choix-ville:focus {
+    /* La bordure d'input s'appelle outline et non pas border */
+    outline-color: #0065FC;
+}
+
+
+#rechercher {
+
+    padding: 14px;
+    background-color: #0065FC;
+    color: white;
+    border: none;
+    border-radius:0 10px 10px 0;
+    display: none;
+    height: 45px;
+
+}
+
+
+#rechercher-mobile {
+
+    padding: 14px;
+    background-color: #0065FC;
+    color: white;
+    border: none;
+    border-radius:13px 13px 13px 13px;
+    position: relative;
+    right: 10px;
+}
+
+}
